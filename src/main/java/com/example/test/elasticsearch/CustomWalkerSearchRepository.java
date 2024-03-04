@@ -1,6 +1,5 @@
 package com.example.test.elasticsearch;
 
-import com.project.dogwalker.walkersearch.dto.request.WalkerInfoRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

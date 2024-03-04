@@ -34,7 +34,7 @@ public class WalkerDocument {
   private GeoPoint location;
 
   public static WalkerDocument of(User user){
-    GeoPoint geoPoint = new GeoPoint(user.getUserLat(),user.getUserLnt());
+    GeoPoint geoPoint = new GeoPoint(user.getLocation().getX(),user.getLocation().getY());
     return WalkerDocument.builder()
         .id(user.getUserId())
         .walker_name(user.getUserName())

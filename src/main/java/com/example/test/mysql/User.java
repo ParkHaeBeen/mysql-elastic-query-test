@@ -15,6 +15,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.locationtech.jts.geom.Point;
 
 @Entity
 @Getter
@@ -37,11 +38,8 @@ public class User extends BaseEntity {
   @Column(name = "user_phone_number",nullable = false)
   private String userPhoneNumber;
 
-  @Column(name = "user_lat",nullable = false)
-  private Double userLat;
-
-  @Column(name = "user_lnt",nullable = false)
-  private Double userLnt;
+  @Column(name = "location",nullable = false)
+  private Point location;
 
   @Builder.Default
   @Enumerated(EnumType.STRING)
